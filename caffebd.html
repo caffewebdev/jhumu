@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jhumu</title>
+  <link href="style.css" rel="stylesheet">  
+</head>
+<body>
+<ul class="navigation">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Student</a></li>
+  <li><a href="#">Projects</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">Donate</a></li>
+</ul>
+    
+<video width="100%"  controls loop muted autoplay>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+ 
+  Your browser does not support HTML5 video.
+</video>
+    <div><h1>About caffe</h1></div>
+    <div class="about-caffe">
+            <div id="paragrap">
+                <p>CAFFE (Computers Are Free For Everyone) is a UK charity providing free training in coding, design and electronics to underpriviliged young people in Dhaka, Bangladesh.<br>
+                 Our students come from very low income families who could never afford to pay for the type of training we provide. Our goal is to improve our students' education and future opportunities by providing them with practical skills in coding, design and electronics, so that they will have a chance to find well paid jobs in the IT sector.</p>
+            </div>
+       <div id="slid">
+            <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <!--<div class="numbertext">1 / 3</div>-->
+                      <img src="http://caffebd.org/img/design.jpg" style="width:100%" >
+                     <!-- <div class="text">Caption Text</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                     <!-- <div class="numbertext">2 / 3</div>-->
+                      <img src="http://caffebd.org/img/arduino.jpg" style="width:100%" >
+                      <!--<div class="text">Caption Two</div>-->
+                    </div>
+
+                    <div class="mySlides fade">
+                      <!--<div class="numbertext">3 / 3</div>-->
+                      <img src="http://caffebd.org/img/code.jpg" style="width:100%"> 
+                           <!--<div class="text">Caption Three</div>-->
+                    </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!--<br>-->
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+                
+                </div>
+           </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    
+    <div><h1>Our class</h1></div>
+<div class="flex-container">
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    <div><img src="https://pbs.twimg.com/media/DEwkzvAUIAA-Ohk.jpg"></div>
+    
+    </div>
+
+</body>
+</html>
